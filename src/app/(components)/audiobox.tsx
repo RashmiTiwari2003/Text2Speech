@@ -10,7 +10,7 @@ import Audiofile from './audiofile'
 import useStore from './store' 
 
 const Audiobox = () => {
-    const { text, setText } = useStore();
+    const { text } = useStore();
 
     const [volume, setVolume] = useState([1.0])
     const [rate, setRate] = useState([1.0])
@@ -26,7 +26,7 @@ const Audiobox = () => {
 
     // let text = "tingalinga lingalinga tingalinga lingalinga"
 
-    let user = { text, lang, tld, volume, rate, isDownload, file_name }
+    const user = { text, lang, tld, volume, rate, isDownload, file_name }
 
     const handleSelectChange = (value: string) => {
         const data = JSON.parse(value)

@@ -1,4 +1,3 @@
-import Image from "next/image";
 import TextBox from "./(components)/textBox";
 import Navbar from "./(components)/navbar";
 
