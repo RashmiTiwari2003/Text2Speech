@@ -38,9 +38,10 @@ const Audiofile = ({ user, onAudioCreated, imageSrc, to_play }: Props) => {
                 let blob = await res.blob()
                 console.log(blob)
                 const data = window.URL.createObjectURL(blob)
-                const audio = new Audio(data);
+                const audio = new Audio(data)
                 audio.playbackRate = user.rate[0]
                 audio.volume = user.volume[0]
+
                 if (to_play) {
                     audio.play();
                 }

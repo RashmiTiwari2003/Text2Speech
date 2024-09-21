@@ -1,13 +1,28 @@
 'use client'
-import React from 'react'
+import React, { useEffect } from 'react'
 import useStore from './store'
 
 const Textfile = () => {
     const { text, setText } = useStore();
 
-    // useEffect(() => {
-    //     console.log(text)
-    // }, [text])
+    const getRequest = async () => {
+        try {
+          let url = "https://ttsx3.onrender.com/"
+    
+          let options = {
+            method: 'GET'
+          }
+    
+          fetch(url, options)
+        }
+        catch (error) {
+          console.log(error)
+        }
+      }
+
+    useEffect(() => {
+        getRequest()
+    }, [])
 
     return (
         <div className='flex flex-col justify-start items-start px-2 py-2 w-full h-full'>
